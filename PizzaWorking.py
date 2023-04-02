@@ -8,11 +8,12 @@ while True:
     t = float(input("How many toppings "))
 
     #try:
-        #s = "large"
-    #except:
+        #s = float(s)
+    #except ValueError:
         #print("Invalid Size. Try Again")
         #continue
-    
+    if s.casefold() != "large" or "extra large":
+        print(s)
 
     if s.casefold() == "large": 
         st = 6
