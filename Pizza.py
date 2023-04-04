@@ -7,13 +7,6 @@ while True:
     s = input("Large or Extra Large? ")
     t = float(input("How many toppings "))
 
-    #try:
-        #s = "large"
-    #except:
-        #print("Invalid Size. Try Again")
-        #continue
-    
-
     if s.casefold() == "large": 
         st = 6
     elif s.casefold() == "extra large":

@@ -4,16 +4,20 @@ st = float(0)
 
 while True:
 
-    s = input("Large or Extra Large? ")
-    t = float(input("How many toppings "))
+    
 
-    #try:
-        #s = float(s)
-    #except ValueError:
-        #print("Invalid Size. Try Again")
-        #continue
-    if s.casefold() != "large" or "extra large":
-        print(s)
+    s = input("Large or Extra Large? ").lower()
+    while s != "large" and s != "extra large":
+        print("\nInvalid. Try Again\n")
+        s = input("Large or Extra Large? ").lower()
+    
+    
+    t = (input("How many toppings "))
+    t = float(t)
+    while t not in range(0, 5):
+        print("\nInvalid. Try Again\n")
+        t = (input("How many toppings "))
+        t = float(t)
 
     if s.casefold() == "large": 
         st = 6
@@ -23,7 +27,7 @@ while True:
         st = (round(st+(0.0167*(t**3) - 0.1*(t**2) + 0.9333*(t) + 0.15), 2))
     tax = round(st*0.13, 2)
 
-
+    print("\nSize ")
     print("\nSubtotal    $" + str(st))
     print("Tax         $" + str(tax))
     print("Total       $" + str(round(float(st + tax), 2)))
