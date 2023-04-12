@@ -25,6 +25,9 @@ while True:
             t = str(input("How many toppings "))
             if float(t) in range(0, 5) and t.isnumeric() is True:
                 z = 1
+            else:
+                print("\nInvalid. Try Again\n")
+                t = t + t
         except ValueError:
             print("\nInvalid. Try Again\n")
             #t = (input("How many toppings "))
