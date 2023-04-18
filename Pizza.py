@@ -12,13 +12,13 @@ while True:
         else:
             print("\nInvalid. Please enter amount, 0-4.\n")
     except ValueError:
-        print("\nInvalid. Not an amount.\n")
+        print("\nInvalid. Not a numerical value.\n")
 
-if s.casefold() == "large" or "l": 
+if s == "large" or s == "l": 
     st = 6
-if s.casefold() == "extra large" or "xl":
+if s == "extra large" or s == "xl":
     st = 10
-    print(st)
+
 if t != 0:
     st = (round(st+(0.0167*(t**3) - 0.1*(t**2) + 0.9333*(t) + 0.15), 2))
 tax = round(st*0.13, 2)
