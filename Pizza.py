@@ -5,7 +5,7 @@ while s != "large" and s != "extra large" and s != "l" and s != "xl":
     
 while True:
     try:
-        t = str(input("How many toppings "))
+        t = str(input("How many toppings? "))
         if float(t) in range(0, 5) and t.isnumeric() is True:
             t = float(t)
             break
